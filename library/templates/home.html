@@ -1,0 +1,15 @@
+ <!DOCTYPE html>
+
+ <head>
+   <title>My favourite Books</title>
+ </head>
+
+ <body>
+   <h1>All Books</h1>   
+   {% for book in book_list %}
+   <ul>
+        <li>Title: {{ book.title }}</li>
+        <li>Author: {% for author in book.author.all %}{{ author }}</br>{% endfor %}</li>
+   </ul>
+   {% endfor %}
+</body>
